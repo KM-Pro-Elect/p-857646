@@ -1,3 +1,4 @@
+
 import React from "react";
 import { CategoryCard } from "@/components/ui/CategoryCard";
 
@@ -19,14 +20,7 @@ export const CategoryGrid = () => {
       <div className="border w-full h-px border-black border-solid" />
       <div className="w-full max-w-[1075px] mt-[19px] max-md:max-w-full">
         <div className="gap-5 flex flex-wrap max-md:flex-col max-md:items-stretch">
-          {categories.slice(0, 3).map((category) => (
-            <CategoryCard key={category} title={category} />
-          ))}
-        </div>
-      </div>
-      <div className="w-full max-w-[1075px] mt-[21px] max-md:max-w-full">
-        <div className="gap-5 flex flex-wrap max-md:flex-col max-md:items-stretch">
-          {categories.slice(3).map((category) => (
+          {categories.map((category) => (
             <CategoryCard key={category} title={category} />
           ))}
         </div>
@@ -34,3 +28,4 @@ export const CategoryGrid = () => {
     </section>
   );
 };
+
